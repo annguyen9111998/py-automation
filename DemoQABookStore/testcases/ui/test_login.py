@@ -15,7 +15,7 @@ class TestLogin():
     @pytest.mark.parametrize("account", Account.get_list_account_from_json('resources/test_data/account.json','valid'))
     def test_login_successfully_with_valid_account(self, account):
         book_store_page =  BookStorePage()
-        book_store_page.go_to_login_page()
+        #book_store_page.go_to_login_page()
 
         login_page = LoginPage()
         login_page.login(account)

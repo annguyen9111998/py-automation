@@ -26,7 +26,7 @@ steps:
 
 - powershell: Set-DisplayResolution -Width 1920 -Height 1080 -Force
   displayName: 'Update Display Resolution'
-- powershell: .\runtest.ps1 -browser $(browser) -environment $(environment) -tag $(tag)
+- powershell: .\runtest.ps1 -browser firefox_local -environment qa 
   displayName: 'Run Selenium Scripts'
 - task: PublishTestResults@2
   condition: always()
